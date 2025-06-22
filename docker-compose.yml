@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  # db:
+  #   image: mysql:8.0
+  #   container_name: mysql_db
+  #   restart: always
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: rootpass
+  #     MYSQL_DATABASE: contactdb
+  #     MYSQL_USER: user
+  #     MYSQL_PASSWORD: userpass
+  #   ports:
+  #     - "3307:3306"
+  #   volumes:
+  #     - db_data:/var/lib/mysql
+
+  backend:
+    build: ./backend
+  #   depends_on:
+  #     - db
+    ports:
+      - "18080:18080"
+  #   environment:
+  #     DB_HOST: db
+  #     DB_NAME: contactdb
+  #     DB_USER: user
+  #     DB_PASS: userpass
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  db_data:

@@ -4,7 +4,7 @@
 
 class Contact : public Person {
    public:
-    Contact();  // default constructor
+       Contact();  // default constructor
 
     // non default constructor
     Contact(std::string p_name, std::string p_phone_number, std::string p_email, std::string p_tag);

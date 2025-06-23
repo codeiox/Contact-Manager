@@ -32,7 +32,7 @@ Welcome! This is an open-source **Contact Management System** built using C++, D
 - Note: Make sure docker desktop is installed and running.
 
 ```bash
-git clone https://github.com/your-username/contact-manager.git
+git clone https://github.com/codeiox/Contact-Manager
 cd contact-manager
 docker compose up --build
 ```

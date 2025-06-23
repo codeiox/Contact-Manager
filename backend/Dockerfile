@@ -1,5 +1,7 @@
 
 # Stage 1: Build Drogon App
+
+# TODO: debain::bookworm-slim builder has 1 high vulnerability
 FROM debian:bookworm-slim AS builder
 
 # 1) Install build tools & Drogon dependencies
@@ -45,6 +47,8 @@ RUN apt-get update && apt-get install -y \
     libuuid1 \
     zlib1g \
     libmysqlcppconn7v5 \
+    libpq5 \
+    libsqlite3-0 \   
     && rm -rf /var/lib/apt/lists/*
 
 # 6) Copy the app binary from the builder

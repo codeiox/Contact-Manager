@@ -4,6 +4,20 @@ Welcome! This is an open-source **Contact Management System** built using C++, D
 
 ---
 
+## Objectives
+
+The goal of this project is to learn and apply following data structures as much as possible:
+
+- Sequential Containers (Arrays, vectors, linked lists, and other linear sturctures)
+- Stacks, Queues, and Priority Queue (LIFO/FIFO)
+- Binary Tree with Recursion or other loops
+- Sets and Maps (Hash Maps)
+- Sorting Algorithms
+- Self-Balancing Search Trees (AVL, Red Black Trees)
+- Graph (DFS, BFS, etc.)
+
+Note: Not all of these structures may not naturally git into final application, but the goal is to try to incorporate them thoughtfully wherever possible to maximize learning and experience.
+
 ## 🛠️ Current Status
 
 - [x] Project setup

@@ -13,32 +13,27 @@ class Person {
     std::string tag;
 
    public:
-    Person();  // default constructor
+    Person() = default;  // default constructor
 
     // non-default constructor
     Person(std::string p_name, std::string p_phone_number, std::string p_email, std::string p_tag);
 
-    virtual ~Person();  // pure virtual destructor
+    virtual ~Person() = 0;  // pure virtual destructor
 
-    Person(const Person& obj);  // copy constructor
+    Person(const Person& other);  // copy constructor
 
-    // pure virtual function (known as abstract)
-    virtual void displayInfo() const = 0;
-
-    // pure virtual function (known as abstract)
-    virtual void groupContact(const std::string& tag) const = 0;
+    // copy asignment Operator
+    // Derived class must override this function
+    virtual Person& operator=(const Person& other) = 0;
 
     // operator == overloading
+    // Derived class must override this function
     virtual bool operator==(const Person& other) const = 0;
 
-    // toString function to return a string representation of the object
+    virtual bool operator!=(const Person& other) const = 0;
+
+    // display info
     virtual std::string toString() const = 0;
-
-    // ostream operator<< overloading (ONLY for debugging purposes)
-    friend std::ostream& operator<<(std::ostream& output, const Person& person);
-
-    // serialize data
-    virtual std::string serialize() const = 0;
 
     // Mutators and Accessors
     void setName(const std::string& p_name);
@@ -50,10 +45,6 @@ class Person {
     std::string getPhoneNumber() const;
     std::string getEmail() const;
     std::string getTag() const;
-
-    // fromJson function to populate the object from a JSON representation
-    // This function should be implemented in derived classes to handle specific JSON structures
-    virtual void fromJson(const Json::Value& json) = 0;
 };
 
 #endif  // PERSON_H_

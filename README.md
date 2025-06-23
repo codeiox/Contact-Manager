@@ -17,11 +17,25 @@ Welcome! This is an open-source **Contact Management System** built using C++, D
 
 ## 🔧 Tech Stack
 
-- 🖥️ **Backend:** C++ with [Drogon](https://github.com/drogonframework/drogon) and MySQL Connector
+- 🖥️ **Backend:** C++ with [Drogon](https://github.com/drogonframework/drogon) and MySQL C++ Connector
 - 🌐 **Frontend:** [Next.js](https://nextjs.org/) with Tailwind CSS
 - 🛠️ **Build System:** CMake
 - **Docker** Container
 - 💾 **Database:** MySQL
+
+---
+
+## 🚀 Run the Project (with Docker)
+
+**No setup needed!** Just clone and run:
+
+- Note: Make sure docker desktop is installed and running.
+
+```bash
+git clone https://github.com/your-username/contact-manager.git
+cd contact-manager
+docker compose up --build
+```
 
 ---
 
@@ -44,6 +58,11 @@ Feel free to fork the project, suggest improvements, or open a PR!
 - RESTful API design in C++
 - Integrating MySQL with C++
 - Creating a responsive UI with Next.js and Tailwind CSS
+
+---
+
+- Frontend: (http://localhost:3000)
+- Backend: (http://localhost:8000)
 
 ---
 

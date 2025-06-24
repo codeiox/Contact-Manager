@@ -5,6 +5,9 @@ import { useState } from "react";
 import { addContact } from "../lib/api/addContact";
 import { ContactData } from "../lib/types/contact";
 
+//!Impotant:
+// TODO: Needs retructuring to support in-memory data structure retrieval
+
 const Add = () => {
   // Stores and updates the user's contact form input values
   const [formData, setFormData] = useState({
@@ -78,7 +81,7 @@ const Add = () => {
 
         <div>
           <label className="block text-sm font-medium mb-1">
-            Tag: ( Friends, Family, Work, ... )
+            Tag: ( Friends, Family, Work, Emergency, Other )
           </label>
           <input
             type="text"

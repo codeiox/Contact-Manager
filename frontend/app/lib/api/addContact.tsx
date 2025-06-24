@@ -3,9 +3,9 @@
 // lib/types/contact.tsx
 import { ContactData } from "../types/contact";
 
-// Sends contact data to the backend API (Crow) using POST request
+// Sends contact data to the backend API (Drogon) using POST request
 export async function addContact(data: ContactData) {
-  // TODO: change url if deploy
+  //TODO: We need to change the URL to the actual backend endpoint
   const res = await fetch("http://localhost:8080/api/contacts/add", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

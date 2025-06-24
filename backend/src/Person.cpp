@@ -21,3 +21,14 @@ Person::Person(const Person& other) {
     this->email = other.email;
     this->tag = other.tag;
 }
+
+// Getters and setters
+void Person::setName(const std::string& p_name) { name = p_name; }
+void Person::setPhoneNumber(const std::string& p_number) { phone_number = p_number; }
+void Person::setEmail(const std::string& p_email) { email = p_email; }
+void Person::setTag(const std::string& p_tag) { tag = p_tag; }
+
+std::string Person::getName() const { return name; }
+std::string Person::getPhoneNumber() const { return phone_number; }
+std::string Person::getEmail() const { return email; }
+std::string Person::getTag() const { return tag; }

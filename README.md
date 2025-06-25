@@ -56,6 +56,9 @@ docker compose down
 ```
 
 ---
+## Visit the links for live preview:
+- Frontend: (http://localhost:3000)
+- Backend: (http://localhost:8000)
 
 ## 💡 Want to Help?
 
@@ -76,11 +79,6 @@ Feel free to fork the project, suggest improvements, or open a PR!
 - RESTful API design in C++
 - Integrating MySQL with C++
 - Creating a responsive UI with Next.js and Tailwind CSS
-
----
-
-- Frontend: (http://localhost:3000)
-- Backend: (http://localhost:8000)
 
 ---
 

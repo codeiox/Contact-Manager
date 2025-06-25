@@ -49,6 +49,10 @@ Note: Not all of these structures may not naturally git into final application, 
 git clone https://github.com/codeiox/Contact-Manager
 cd contact-manager
 docker compose up --build
+docker compose up
+
+# To stop the docker container, run this command:
+docker compose down
 ```
 
 ---

@@ -48,13 +48,9 @@ class Contact : public Person {
     //! Important: We may have to move serialize() and deserialize() func to seperate class or
     //! struct
 
-        std::string serialize() const;
+    std::string serialize() const;
 
     std::string deserialize() const;
-
-    // fromJson overrides from base class
-    // converts json data format to object
-    void fromJson(const Json::Value& json);
 };
 
 #endif  // BASIC_PERSON_H_

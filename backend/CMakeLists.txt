@@ -41,10 +41,12 @@ enable_testing()
 # Source files
 file(GLOB_RECURSE SOURCES
     src/*.cpp
+    controller/*.cpp
 )
 
 # Executable
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_executable(${PROJECT_NAME} ${SOURCES}
+)
 
 # Linker flags
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")

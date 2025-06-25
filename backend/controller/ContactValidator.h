@@ -39,7 +39,7 @@ class ContactValidator {
     }
 
     bool isValidEmail(const std::string& email) const {
-        if (!std::regex_match(email, std::regex(R"(\w+@\w+\.\w+)"))) {
+        if (!std::regex_match(email, std::regex(R"(([\w\.-]+)@([\w\.-]+)\.(\w+))"))) {
             errors.push_back("Invalid email format");
             return false;
         }
@@ -66,10 +66,18 @@ class ContactValidator {
         errors.clear();  // Clear previous error messages
         bool valid = true;
 
-        valid &= isValidName(dto.name);
-        valid &= isValidPhoneNumber(dto.phone_number);
-        valid &= isValidEmail(dto.email);
-        valid &= isValidTag(dto.tag);
+        if (!isValidName(dto.name)) {
+            valid = false;
+        };
+        if (!isValidPhoneNumber(dto.phone_number)) {
+            valid = false;
+        }
+        if (!isValidEmail(dto.email)) {
+            valid = false;
+        };
+        if (!isValidTag(dto.tag)) {
+            valid = false;
+        };
         return valid;
     }
 

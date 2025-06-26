@@ -14,7 +14,7 @@ class ContactValidator {
         errors;  // mutable allows modification even inside const methods like below validate()
 
     // TODO: Add more tags if needed
-    const std::set<std::string> allowedTags{"Friends", "Family", "Work", "Emergency", "Other"};
+    const std::set<std::string> allowedTags{"Friend", "Family", "Work", "Emergency", "Other"};
 
     bool isValidName(const std::string& name) const {
         if (name.empty()) {
@@ -30,11 +30,19 @@ class ContactValidator {
     }
 
     bool isValidPhoneNumber(const std::string& phone_number) const {
-        if (!std::regex_match(phone_number, std::regex(R"(^\d{10}$)"))) {
-            errors.push_back("Phone number must be 10 digits");
+        // account for character '-' if exist
+        int digitSize = 0;
+        for (char ch : phone_number) {
+            if (ch == '-') {
+                continue;  // skip the character '-'
+            }
+
+            ++digitSize;  // should only be 10 digit
+        }
+        if (digitSize != 10) {
+            errors.push_back("Phone number must be 10 digits [new test]");
             return false;
         }
-        // otherwise ture
         return true;
     }
 

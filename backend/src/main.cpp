@@ -2,18 +2,14 @@
 
 #include <iostream>
 
+#include "../controller/ContactFetch.h"
+#include "../include/Contact.h"
+
 int main(int argc, const char *argv[]) {
-    drogon::app()
-        .registerHandler("/hello",
-                         [](const drogon::HttpRequestPtr &req,
-                            std::function<void(const drogon::HttpResponsePtr &)> &&callback) {
-                             auto resp = drogon::HttpResponse::newHttpResponse();
-                             resp->setBody("Hello, Drogon is running!");
-                             callback(resp);
-                             std::cout << "Server started at http://localhost:18080/hello"
-                                       << std::endl;
-                         },
-                         {drogon::Get})
-        .addListener("0.0.0.0", 18080)
-        .run();
+    drogon::app().addListener("0.0.0.0", 8080).run();
+
+    // print the data
+    Contact contact;
+    contact.toString();
+    return 0;
 }

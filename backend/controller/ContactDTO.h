@@ -27,7 +27,5 @@ struct ContactDTO {
         dto.tag = json["tag"].asString();
         return dto;
     }
-
-    // TODO: create toJson() function that will convert object to json and send the data to frontend
 };
 #endif  // CONTACTDTO_H_

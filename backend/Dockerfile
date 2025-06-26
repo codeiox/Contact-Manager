@@ -1,7 +1,4 @@
-
 # Stage 1: Build Drogon App
-
-# TODO: debain::bookworm-slim builder has 1 high vulnerability
 FROM debian:bookworm-slim AS builder
 
 # 1) Install build tools & Drogon dependencies
@@ -48,15 +45,16 @@ RUN apt-get update && apt-get install -y \
     zlib1g \
     libmysqlcppconn7v5 \
     libpq5 \
-    libsqlite3-0 \   
+    libsqlite3-0 \
     && rm -rf /var/lib/apt/lists/*
 
 # 6) Copy the app binary from the builder
 WORKDIR /app
+
 COPY --from=builder /src/build/ContactManager .
 
 # 7) Expose Drogon’s default port (adjust if needed)
-EXPOSE 18080
+EXPOSE 8080
 
 # 8) Start the server
 CMD ["./ContactManager"]

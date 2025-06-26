@@ -81,7 +81,7 @@ const Add = () => {
 
         <div>
           <label className="block text-sm font-medium mb-1">
-            Tag: ( Friends, Family, Work, Emergency, Other )
+            Tag: ( Friend, Family, Work, Emergency, Other )
           </label>
           <input
             type="text"

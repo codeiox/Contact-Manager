@@ -3,8 +3,8 @@
 #include "Person.h"
 
 class Contact : public Person {
-    // TODO: we may need to include private data feilds to extend the derived class.
-
+    // TODO: we may need to include private data fields to extend the derived class.
+    // TODO: maybe timestamp or address, etc to extend the functionality of Person class.
    public:
     Contact() = default;  // default constructor
 

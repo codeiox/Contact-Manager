@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 
 services:
   # db:
@@ -20,7 +20,7 @@ services:
   #   depends_on:
   #     - db
     ports:
-      - "18080:18080"
+      - "8080:8080"
   #   environment:
   #     DB_HOST: db
   #     DB_NAME: contactdb

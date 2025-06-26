@@ -1,5 +1,6 @@
 #include "../include/Contact.h"
 
+#include <sstream>
 // Constructor
 Contact::Contact(std::string p_name, std::string p_phone_number, std::string p_email,
                  std::string p_tag)
